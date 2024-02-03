@@ -15,7 +15,6 @@ class MusicListPage extends StatefulWidget {
 }
 
 class _MusicListPageState extends State<MusicListPage> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -28,14 +27,14 @@ class _MusicListPageState extends State<MusicListPage> {
       backgroundColor: AppColors.primaryBackground,
       body: Column(
         children: [
-      
           const SizedBox(height: 20),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 7.0),
             child: CategorySelectionRow(),
           ),
           const SizedBox(height: 20),
-          Expanded( // Wrap the GridView with Expanded
+          Expanded(
+            // Wrap the GridView with Expanded
             child: Consumer<AllMusicViewModel>(
               builder: (context, viewModel, child) {
                 var selection = Provider.of<SelectionIndex>(context);

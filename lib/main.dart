@@ -43,7 +43,8 @@ class _MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'ZenMinds- A Mindfulness App',
+        title: 'ZenMinds- A Mindfullness App',
+        /*Displays at the title of app in multipage screen ... */
         theme: ThemeData(
           useMaterial3: true,
         ),
