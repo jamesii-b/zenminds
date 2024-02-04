@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ExerciseParent {
   String thumbnail;
@@ -15,7 +13,8 @@ class ExerciseParent {
 
 class ExerciseModel {
   String image;
-  String time;
+  int timeInSec;
   String title;
-  ExerciseModel({required this.image, required this.time, required this.title});
+  ExerciseModel(
+      {required this.image, required this.timeInSec, required this.title});
 }

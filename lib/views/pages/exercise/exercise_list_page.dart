@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zenminds/const/colors.dart';
-import 'package:zenminds/models/exercise_model.dart';
 import 'package:zenminds/viewmodel/exercise_view_model.dart';
 import 'package:zenminds/views/pages/exercise/screens/exercise_description_page.dart';
 

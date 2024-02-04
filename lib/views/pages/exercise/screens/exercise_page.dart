@@ -4,10 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zenminds/models/exercise_model.dart';
 
 class ExercisePage extends StatefulWidget {
-  final ExerciseModel exercise;
-  final VoidCallback? onNavigateNext;
-  const ExercisePage({Key? key, required this.exercise, this.onNavigateNext})
-      : super(key: key);
+  final List<ExerciseModel> exercises;
+  const ExercisePage({Key? key, required this.exercises}) : super(key: key);
 
   @override
   _ExercisePageState createState() => _ExercisePageState();
@@ -15,9 +13,9 @@ class ExercisePage extends StatefulWidget {
 
 class _ExercisePageState extends State<ExercisePage> {
   late Timer _timer;
+  int _currentExerciseIndex = 0;
   int _secondsRemaining = 0;
-  int initialSeconds = 10;
-  double percentage = 0.0;
+  double _percentage = 0.0;
 
   @override
   void initState() {
@@ -32,17 +30,34 @@ class _ExercisePageState extends State<ExercisePage> {
   }
 
   void _startTimer() {
-    _secondsRemaining = 10; // Set the desired duration in seconds
+    _secondsRemaining = widget.exercises[_currentExerciseIndex].timeInSec;
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         if (_secondsRemaining > 0) {
           _secondsRemaining--;
-          percentage = (_secondsRemaining / initialSeconds);
+          _percentage = (_secondsRemaining /
+              widget.exercises[_currentExerciseIndex].timeInSec);
         } else {
           _timer.cancel();
+          _navigateToNextExercise();
         }
       });
     });
+  }
+
+  void _navigateToNextExercise() {
+    if (_currentExerciseIndex < widget.exercises.length - 1) {
+      setState(() {
+        _currentExerciseIndex++;
+        _secondsRemaining = widget.exercises[_currentExerciseIndex].timeInSec;
+        _percentage = 0.0; // Reset percentage for new exercise
+        _startTimer();
+      });
+    } else {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => CompletionPage()));
+      // All exercises completed, you can handle this case as per your requirement
+    }
   }
 
   @override
@@ -50,7 +65,7 @@ class _ExercisePageState extends State<ExercisePage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text(widget.exercise.title),
+        title: Text(widget.exercises[_currentExerciseIndex].title),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
@@ -69,7 +84,7 @@ class _ExercisePageState extends State<ExercisePage> {
               left: 0,
               right: 0,
               child: SvgPicture.asset(
-                widget.exercise.image,
+                widget.exercises[_currentExerciseIndex].image,
                 height: MediaQuery.of(context).size.height * 0.25,
               ),
             ),
@@ -84,9 +99,9 @@ class _ExercisePageState extends State<ExercisePage> {
                   gradient: LinearGradient(
                     colors: const [
                       Color.fromARGB(255, 50, 113, 208),
-                      Color(0xFF1976D2),
+                      Color.fromARGB(255, 150, 173, 196),
                     ],
-                    stops: [1 - percentage, percentage],
+                    stops: [1 - _percentage, _percentage],
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
                   ),
@@ -135,6 +150,30 @@ class _ExercisePageState extends State<ExercisePage> {
           ],
         );
       },
+    );
+  }
+}
+
+class CompletionPage extends StatelessWidget {
+  const CompletionPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+          child: Center(
+            child: Text("Congratulations! You have completed all exercises."),
+          ),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 50, 113, 208),
+                Color.fromARGB(255, 150, 173, 196),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          )),
     );
   }
 }
