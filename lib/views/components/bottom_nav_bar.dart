@@ -25,7 +25,7 @@ class BottomNavBar extends StatelessWidget {
           label: "Music",
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.sports),
+          icon: Icon(Icons.sports_martial_arts_rounded),
           label: "Exercise",
         ),
       ],

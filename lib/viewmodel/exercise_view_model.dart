@@ -72,6 +72,101 @@ class ExerciseViewModel extends ChangeNotifier {
             title: "Yoga Advance 7"),
       ]);
 
+  ExerciseParent stretching_advanced = ExerciseParent(
+      thumbnail: "assets/images/streching-core/thumbnail.svg",
+      title: "Stretching-Core",
+      description: "Stretch your every porrtion of the body",
+      exerciseList: [
+        ExerciseModel(
+            image: "assets/images/stretching-core/1.svg",
+            timeInSec: 10,
+            title: "Stretching-Core 1"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/2.svg",
+            timeInSec: 11,
+            title: "Stretching-Core 2"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/3.svg",
+            timeInSec: 12,
+            title: "Stretching-Core 3"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/4.svg",
+            timeInSec: 13,
+            title: "Stretching-Core 4"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/5.svg",
+            timeInSec: 14,
+            title: "Stretching-Core 5"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/6.svg",
+            timeInSec: 15,
+            title: "Stretching-Core 6"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/7.svg",
+            timeInSec: 16,
+            title: "Stretching-Core 7"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/8.svg",
+            timeInSec: 17,
+            title: "Stretching-Core 8"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/9.svg",
+            timeInSec: 18,
+            title: "Stretching-Core 9"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/10.svg",
+            timeInSec: 19,
+            title: "Stretching-Core 10"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/11.svg",
+            timeInSec: 20,
+            title: "Stretching-Core 11"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/12.svg",
+            timeInSec: 21,
+            title: "Stretching-Core 12"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/12.svg",
+            timeInSec: 21,
+            title: "Stretching-Core 12"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/13.svg",
+            timeInSec: 22,
+            title: "Stretching-Core 13"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/14.svg",
+            timeInSec: 23,
+            title: "Stretching-Core 14"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/15.svg",
+            timeInSec: 24,
+            title: "Stretching-Core 15"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/16.svg",
+            timeInSec: 25,
+            title: "Stretching-Core 16"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/17.svg",
+            timeInSec: 26,
+            title: "Stretching-Core 17"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/18.svg",
+            timeInSec: 27,
+            title: "Stretching-Core 18"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/19.svg",
+            timeInSec: 28,
+            title: "Stretching-Core 19"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/20.svg",
+            timeInSec: 29,
+            title: "Stretching-Core 20"),
+        ExerciseModel(
+            image: "assets/images/stretching-core/21.svg",
+            timeInSec: 30,
+            title: "Stretching-Core 21"),
+      ]);
+
   get yogaBasic => yoga_basic;
   get yogaAdvance => yoga_advance;
   late List<ExerciseParent> categories = [yoga_basic, yoga_advance];
