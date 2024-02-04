@@ -72,8 +72,8 @@ class ExerciseViewModel extends ChangeNotifier {
             title: "Yoga Advance 7"),
       ]);
 
-  ExerciseParent stretching_advanced = ExerciseParent(
-      thumbnail: "assets/images/streching-core/thumbnail.svg",
+  ExerciseParent stretching_core = ExerciseParent(
+      thumbnail: "assets/images/stretching-core/thumbnail.svg",
       title: "Stretching-Core",
       description: "Stretch your every porrtion of the body",
       exerciseList: [
@@ -169,5 +169,6 @@ class ExerciseViewModel extends ChangeNotifier {
 
   get yogaBasic => yoga_basic;
   get yogaAdvance => yoga_advance;
-  late List<ExerciseParent> categories = [yoga_basic, yoga_advance];
+  get stretchingCore => stretching_core;
+  late List<ExerciseParent> categories = [yoga_basic, yoga_advance,stretching_core];
 }
