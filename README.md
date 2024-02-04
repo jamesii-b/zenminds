@@ -28,6 +28,17 @@ To install ZenMinds on your device, follow these steps:
 4. Set a timer if desired and begin your relaxation journey.
 5. Track your progress and explore new content to enhance your mental well-being.
 
+## Screenshots 📸
+![Screenshot 1](i-1.jpg)
+![Screenshot 2](i-2.jpg)
+![Screenshot 3](i-3.jpg)
+![Screenshot 4](i-4.jpg)
+
+
+
 ## Support 🤝
 
 For any questions, issues, or feedback, feel free to contact at [jamesii-b](https://github.com/jamesii-b).
+
+## Derived from 📚
+Figma-Design: [Figma Community](https://www.figma.com/community/file/882888114457713282/meditation-app-ui?searchSessionId=ls7zxt85-qmd6ktp5at&fuid=1328930692164390358)
