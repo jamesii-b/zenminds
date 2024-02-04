@@ -27,10 +27,28 @@ class _MusicListPageState extends State<MusicListPage> {
       backgroundColor: AppColors.primaryBackground,
       body: Column(
         children: [
-          const SizedBox(height: 20),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 7.0),
-            child: CategorySelectionRow(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.19,
+            child: Stack(
+              children: [
+                Image.asset(
+                  "assets/images/ui-3.png",
+                  fit: BoxFit.cover,
+                ),
+                Image.asset("assets/images/ui-4.png",
+                    fit: BoxFit.fill, width: MediaQuery.of(context).size.width),
+                Positioned(
+                  top: MediaQuery.of(context).size.height * 0.09,
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 7.0),
+                      child: CategorySelectionRow(),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 20),
           Expanded(

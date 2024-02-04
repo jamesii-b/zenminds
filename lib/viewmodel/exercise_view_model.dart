@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zenminds/models/exercise_model.dart';
 
 class ExerciseViewModel extends ChangeNotifier {
@@ -39,7 +38,7 @@ class ExerciseViewModel extends ChangeNotifier {
       ]);
 
   ExerciseParent yoga_advance = ExerciseParent(
-      thumbnail: "assets/images/yoga-advance/thumbnail",
+      thumbnail: "assets/images/yoga-advance/thumbnail.svg",
       title: "Yoga Advance",
       description: "Yoga Advance for experts",
       exerciseList: [
@@ -75,4 +74,5 @@ class ExerciseViewModel extends ChangeNotifier {
 
   get yogaBasic => yoga_basic;
   get yogaAdvance => yoga_advance;
+  late List<ExerciseParent> categories = [yoga_basic, yoga_advance];
 }

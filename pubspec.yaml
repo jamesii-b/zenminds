@@ -69,10 +69,8 @@ flutter:
     - assets/
     - assets/images/
     - assets/audio/
-    - assets/images/yoga-advanced/
+    - assets/images/yoga-advance/
     - assets/images/yoga-basic/
-    - assets/images/yoga-basic/thumbnail.svg
-    - assets/images/yoga-basic/thumbnail.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
