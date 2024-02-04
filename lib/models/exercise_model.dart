@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ExerciseParent {
-  Widget thumbnail;
+  String thumbnail;
   String title;
   String description;
   List<ExerciseModel> exerciseList;
@@ -14,7 +14,7 @@ class ExerciseParent {
 }
 
 class ExerciseModel {
-  Widget image;
+  String image;
   String time;
   String title;
   ExerciseModel({required this.image, required this.time, required this.title});

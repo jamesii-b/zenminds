@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:zenminds/const/colors.dart';
 import 'package:zenminds/models/exercise_model.dart';
 import 'package:zenminds/views/pages/exercise/screens/exercise_page.dart';
@@ -12,7 +13,9 @@ class ExerciseDescriptionPage extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        category.thumbnail,
+        SvgPicture.asset(
+          category.thumbnail,
+        ),
         Text(category.title),
         Text(category.description),
         SizedBox(
