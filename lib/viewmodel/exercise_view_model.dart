@@ -4,12 +4,14 @@ import 'package:zenminds/models/exercise_model.dart';
 
 class ExerciseViewModel extends ChangeNotifier {
   ExerciseParent yoga_basic = ExerciseParent(
-      thumbnail: Image.asset("asssets/images/yoga-basic/thumbnal"),
+      thumbnail: SvgPicture.asset(
+        "assets/images/yoga-basic/thumbnail.svg",
+      ),
       title: "Yoga Basic",
       description: "Yoga Basic for beginners",
       exerciseList: [
         ExerciseModel(
-            image: SvgPicture.asset("asssets/images/yoga-basic/1.svg"),
+            image: SvgPicture.asset("assets/images/yoga-basic/1.svg"),
             time: "10 min",
             title: "Yoga Basic 1"),
         ExerciseModel(
@@ -39,12 +41,12 @@ class ExerciseViewModel extends ChangeNotifier {
       ]);
 
   ExerciseParent yoga_advance = ExerciseParent(
-      thumbnail: Image.asset("asssets/images/yoga-advance/thumbnail"),
+      thumbnail: Image.asset("assets/images/yoga-advance/thumbnail"),
       title: "Yoga Advance",
       description: "Yoga Advance for experts",
       exerciseList: [
         ExerciseModel(
-            image: SvgPicture.asset("asssets/images/yoga-advance/1.svg"),
+            image: SvgPicture.asset("assets/images/yoga-advance/1.svg"),
             time: "10 min",
             title: "Yoga Advance 1"),
         ExerciseModel(
@@ -73,6 +75,6 @@ class ExerciseViewModel extends ChangeNotifier {
             title: "Yoga Advance 7"),
       ]);
 
-      get yogaBasic => yoga_basic;
-      get yogaAdvance => yoga_advance;
+  get yogaBasic => yoga_basic;
+  get yogaAdvance => yoga_advance;
 }

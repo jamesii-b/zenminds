@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zenminds/providers/selection.dart';
 import 'package:zenminds/viewmodel/music_view_model.dart';
 import 'package:zenminds/views/components/bottom_nav_bar.dart';
-import 'package:zenminds/views/pages/exercise/exercise.dart';
+import 'package:zenminds/views/pages/exercise/exercise_list_page.dart';
 import 'package:zenminds/views/pages/music/music_list_page.dart';
 import 'package:zenminds/views/pages/home/home.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   static const List<Widget> _screens = <Widget>[
     HomePage(),
     MusicListPage(),
-    ExercisePage()
+    ExerciseListPage()
   ];
 
   void _onItemTapped(int index) {

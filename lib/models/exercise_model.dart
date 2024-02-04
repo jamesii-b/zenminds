@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ExerciseParent {
-  Image thumbnail;
+  Widget thumbnail;
   String title;
   String description;
   List<ExerciseModel> exerciseList;
