@@ -29,10 +29,14 @@ To install ZenMinds on your device, follow these steps:
 5. Track your progress and explore new content to enhance your mental well-being.
 
 ## Screenshots 📸
-![Screenshot 1](i-1.jpg)
-![Screenshot 2](i-2.jpg)
-![Screenshot 3](i-3.jpg)
-![Screenshot 4](i-4.jpg)
+
+| Native Splash | Audio List View | Exercise List View |
+|---------|---------|---------|
+| ![Image 1](i-1.jpg) | ![Image 2](i-2.jpg) | ![Image 3](i-3.jpg) |
+
+| Audio Description Page | Audio Player | Exercise Player |
+|---------|---------|---------|
+| ![Image 3](i-6.jpg) | ![Image 1](i-4.jpg) | ![Image 2](i-5.jpg) |
 
 
 
